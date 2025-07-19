@@ -1,0 +1,46 @@
+<!-- <header class="navbar navbar-expand-lg fixed-top bg-white">
+
+    <div class="container justify-content-center">
+        <a href="#"><img src="assets/images/logo.png" alt="WeBlog" class="logo"></a><span
+            class="site-logo">WeBlog</span>
+    </div>
+    <div class="container" *ngIf="isLoggedIn$ | async">
+        <div class="d-flex justify-content-center align-items-center">
+            <a class="me-3 text-decoration-none">{{ userEmail }}</a>
+            <button class="btn btn-sm btn-info bg-secondary-theme text-theme-primary"
+                (click)="onLogout()">Logout</button>
+        </div>
+    </div>
+
+
+</header> -->
+
+
+<!--chatGPT code 
+============================================================= -->
+<header class="navbar navbar-expand-lg fixed-top bg-white">
+
+  <!-- Logo section -->
+  <div
+    class="container d-flex align-items-center"
+    [ngClass]="{ 'justify-content-center': !(isLoggedIn$ | async), 'justify-content-between': (isLoggedIn$ | async) }"
+  >
+    <!-- Left: Logo (always shown) -->
+    <a routerLink="/" class="navbar-brand d-flex align-items-center">
+      <img src="assets/images/logo.png" alt="WeBlog" class="logo me-2" />
+      <span class="site-logo">WeBlog</span>
+    </a>
+
+    <!-- Right: User info (only shown when logged in) -->
+    <div *ngIf="isLoggedIn$ | async" class="d-flex align-items-center ms-auto">
+      <span class="me-3 text-decoration-none">{{ userEmail }}</span>
+      <button
+        class="btn btn-sm btn-info bg-secondary-theme text-theme-primary"
+        (click)="onLogout()"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+
+</header>

@@ -1,0 +1,19 @@
+header{
+    height: 100px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.site-logo{
+    font-size: 3.5em;
+}
+
+.bg-secondary-theme{
+  background-color: var(--secondary-color);
+}
+
+.text-theme-primary{
+  color: var(--primary-color);
+}

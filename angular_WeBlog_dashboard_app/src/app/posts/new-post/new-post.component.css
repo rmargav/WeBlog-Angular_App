@@ -1,0 +1,15 @@
+.btn-add {
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.img-preview {
+  height: 350px;
+}
+
+select {
+  appearance: auto;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+}

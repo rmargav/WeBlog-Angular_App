@@ -1,0 +1,6 @@
+button {
+  height: 58px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
